@@ -1,16 +1,17 @@
 {
-  "name": "server",
+  "name": "search-book-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "server side book search app module 21",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "watch": "nodemon server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "jd9913",
   "license": "ISC",
   "dependencies": {
+    "apollo-server-express": "^2.19.1",
     "bcrypt": "^5.0.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
@@ -18,5 +19,13 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jd9913/searchBookRepo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jd9913/searchBookRepo/issues"
+  },
+  "homepage": "https://github.com/jd9913/searchBookRepo#readme"
 }
