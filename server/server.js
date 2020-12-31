@@ -7,6 +7,8 @@ const { authMiddleware }= require('./utils/auth');
 
 //import ApolloServer
 const { ApolloServer } = require("apollo-server-express");
+const { bootstrap: bootstrapGlobalAgent }=require('global-agent');
+bootstrapGlobalAgent();
 
 //import typeDefs and resolvers
 const { typeDefs, resolvers } = require('./schemas');
