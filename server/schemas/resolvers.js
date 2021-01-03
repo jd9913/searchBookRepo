@@ -40,19 +40,20 @@ const resolvers = {
       }
 
       const token = signToken(user);
-      return user;
+      return { token, user };
     },
     saveBook: async (parent, args, context) => {
       if (context.user) {
         const userUpdate = await User.findByIdAndUpdate(
           { _id: context.user._id },
-          { $addToSet: { savedBooks: args.input } },
+          { $addToSet: { savedBooks: input } },
           { new: true }
         );
         return userUpdate;
       }
       throw new AuthenticationError('Please log in');
     },
+    
     removeBook: async (parent, args, context) => {
       if (context.user) {
         const updatedUser = await User.findOneAndUpdate(
