@@ -23,7 +23,6 @@ const resolvers = {
       const user = await User.create(args);
 
       return user;
-
     },
 
     login: async (parent, { email, password }) => {
@@ -42,6 +41,7 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
+    
     saveBook: async (parent, args, context) => {
       if (context.user) {
         const userUpdate = await User.findByIdAndUpdate(
